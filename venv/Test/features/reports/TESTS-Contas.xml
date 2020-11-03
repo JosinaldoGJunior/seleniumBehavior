@@ -1,0 +1,48 @@
+<testsuite name="Contas.Cadastro de contas" tests="2" errors="0" failures="0" skipped="1" time="2.341098" timestamp="2020-11-03T15:16:19.056150" hostname="DESKTOP-VME1Q0E"><testcase classname="Contas.Cadastro de contas" name="Nao deve inserir uma conta com nome ja existente" status="passed" time="2.341098"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @b1
+  Cenario: Nao deve inserir uma conta com nome ja existente
+    Dado que estou acessando a aplicacao ... passed in 1.020s
+    Quando informo o usuario "leonardolive10@gmail.com" ... passed in 0.001s
+    E informo a senha "47894789" ... passed in 0.000s
+    E clico no entrar ... passed in 0.710s
+    Entao visualize uma pagina com a mensagem "Bem vindo, leonardo!" ... passed in 0.000s
+    E navego ate a tela de adiconar contas ... passed in 0.278s
+    Quando salvo a conta "leonardo josedys" ... passed in 0.332s
+    Então sou notificado com a mensagem "Já existe uma conta com esse nome!" ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Status.passed que estou acessando a aplicacao
+Status.passed informo o usuario "leonardolive10@gmail.com"
+Status.passed informo a senha "47894789"
+Status.passed clico no entrar
+Status.passed visualize uma pagina com a mensagem "Bem vindo, leonardo!"
+Status.passed navego ate a tela de adiconar contas
+Status.passed salvo a conta "leonardo josedys"
+Status.passed sou notificado com a mensagem "Já existe uma conta com esse nome!"
+
+]]>
+</system-out></testcase><testcase classname="Contas.Cadastro de contas" name="Nao deve inserir uma conta sem nome" status="skipped" time="0"><skipped /><system-out>
+<![CDATA[
+@scenario.begin
+
+  @b3
+  Cenario: Nao deve inserir uma conta sem nome
+    Dado que estou acessando a aplicacao ... skipped in 0.000s
+    Quando informo o usuario "leonardolive10@gmail.com" ... skipped in 0.000s
+    E informo a senha "47894789" ... skipped in 0.000s
+    E clico no entrar ... skipped in 0.000s
+    Entao visualize uma pagina com a mensagem "Bem vindo, leonardo!" ... skipped in 0.000s
+    E navego ate a tela de adiconar contas ... skipped in 0.000s
+    Quando salvo a conta " " ... skipped in 0.000s
+    Entao sou notificado com a mensagem "Informe o nome da conta" ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
