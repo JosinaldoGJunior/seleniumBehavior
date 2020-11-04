@@ -13,12 +13,12 @@ Funcionalidade: Cadastro de contas
       Entao visualize uma pagina com a mensagem "Bem vindo, leonardo!"
       E navego ate a tela de adiconar contas
 
-  @b1
+  @testeCadastro
   Cenario: Nao deve inserir uma conta com nome ja existente
       Quando salvo a conta "leonardo josedys"
       Então sou notificado com a mensagem "Já existe uma conta com esse nome!"
 
-  @b3
+  @testeCadastro
   Cenario: Nao deve inserir uma conta sem nome
       Quando salvo a conta " "
       Entao sou notificado com a mensagem "Informe o nome da conta"

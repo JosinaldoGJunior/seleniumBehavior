@@ -10,4 +10,4 @@ class ConfigDriver():
         self.chrome_options.add_argument("--no-sandbox")
         self.chrome_options.add_argument("--disable-dev-shm-usage")
         self.driver = webdriver.Chrome(chrome_options=self.chrome_options,
-                         executable_path=dir_path + "/drivers/chromedriver.exe")
+                                       executable_path=dir_path + "/drivers/chromedriver.exe")
