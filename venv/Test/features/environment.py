@@ -8,7 +8,6 @@ def after_step(context,step):
         feature_arq = str(context.feature.name)
         name = 'scenario: ' + str(context.scenario.name) + ' step: ' + str(step.name) + ' = '
         status = str(step.status) + ' '
-        name + status
         print(name + status)
     else:
         print(step.status, step.name)
