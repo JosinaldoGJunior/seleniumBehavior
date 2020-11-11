@@ -1,6 +1,9 @@
-class PagesAdcContas(object):
+from Packages.config_driver._ConfigWait import ConfigWait
+
+class PagesAdcContas(ConfigWait):
 
     def __init__(self, session):
+        super(PagesAdcContas, self).__init__(session, 30)
         self.session = session
         self.id_contas = 'Contas'
         self.id_adicionar = 'Adicionar'
@@ -13,6 +16,7 @@ class PagesAdcContas(object):
         self.session.find_element_by_link_text(self.id_adicionar).click()
 
     def adc_conta(self,conta):
+        self.waitVisibilityLocated("id", self.id_nome)
         self.session.find_element_by_id(self.id_nome).send_keys(conta)
         self.session.find_element_by_xpath(self.xp_btn_salvar).click()
         return self.session.find_element_by_xpath(self.xp_alert).text
