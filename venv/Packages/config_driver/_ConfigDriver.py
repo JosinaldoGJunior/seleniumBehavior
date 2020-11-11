@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 
-class ConfigDriver():
+class ConfigDriver(object):
     def __init__(self):
         dir_path = str(os.path.dirname(os.path.realpath(__file__))).replace('\\','/')
         self.chrome_options = Options()

@@ -1,6 +1,9 @@
-class PageLogin(object):
+from Packages.config_driver._ConfigWait import ConfigWait
+
+class PageLogin(ConfigWait):
 
     def __init__(self, session):
+        super(PageLogin, self).__init__(session,30)
         self.session = session
         self.usuario = ''
         self.senha = ''
@@ -12,6 +15,7 @@ class PageLogin(object):
 
     def open_page(self):
         self.session.get(self.url)
+        self.waitVisibilityLocated("css", self.id_email)
 
     def realiza_login(self):
         self.session.find_element_by_id(self.id_email).send_keys(self.usuario)

@@ -9,6 +9,7 @@ def after_step(context,step):
         name = 'scenario: ' + str(context.scenario.name) + ' step: ' + str(step.name) + ' = '
         status = str(step.status) + ' '
         print(name + status)
+        context.obj_driver.save_screenshot("reports/screenshots/" + str(context.scenario.name) + "_" + str(step.name) + ".png")
     else:
         print(step.status, step.name)
 
